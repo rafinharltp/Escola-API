@@ -1,6 +1,7 @@
 package com.example.escola_api.model.entity;
 
 import jakarta.persistence.*;
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Max;
@@ -20,6 +21,7 @@ public class Aluno {
 
     @NotBlank(message = "Email é obrigatório")
     @Email(message = "Email deve ser válido")
+    @Column(unique = true)
     private String email;
 
     @Min(value = 1, message = "Idade mínima é 1")

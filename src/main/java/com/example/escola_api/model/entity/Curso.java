@@ -16,7 +16,7 @@ public class Curso {
     @NotBlank(message = "Nome do curso é obrigatório")
     private String nome;
 
-    @Size(max = 255, message = "Descrição deve ter no máximo 255 caracterE")
+    @Size(max = 255, message = "Descrição deve ter no máximo 255 caracteres")
     private String descricao;
 
     @Min(value = 1, message = "Carga horária mínima é 1 hora")
